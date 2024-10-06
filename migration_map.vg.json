@@ -59,6 +59,9 @@
                             "calculate": "datum.total_state_migrants/datum.total_national_migrants", "as": "proportion of migrants"
                         }
                     ],
+                    "mark": {
+                        "type": "geoshape"
+                    },
                     "encoding": {
                         "color": {
                             "field": "proportion of migrants",
