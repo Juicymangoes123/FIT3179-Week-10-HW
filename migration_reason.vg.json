@@ -1,5 +1,5 @@
 {
-    "$schema": "https://vega.github.io/scheme/vega-lite/v5.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
     "height": 450,
     "title": "Reasons for migration in Australia"
