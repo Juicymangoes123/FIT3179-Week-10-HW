@@ -27,6 +27,16 @@
                 {
                     "transform": [
                         {
+                            "lookup": "properties.name",
+                            "from": {
+                                "data": {
+                                    "url": "overseas-migration.csv"
+                                },
+                                "key": "state",
+                                "fields": [""]
+                            }
+                        },
+                        {
                             "filter": {
                                 "param": "time_brush"
                             }
