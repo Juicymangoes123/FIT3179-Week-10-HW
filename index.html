@@ -16,15 +16,20 @@
 
    <p id="title"> Patterns of migration in Australia </p>
 
-    <div id="migration_map"></div>
+    <div id="line_graph"></div>
 
    <script type="text/javascript">
-        var spec = "migration_map.vg.json";
-        vegaEmbed("#migration_map", spec).then(function(results) {}).catch(console.error);
-        console.log("hello");
+        var spec = "line_graph.vg.json";
+        vegaEmbed("#line_graph", spec).then(function(results) {}).catch(console.error);
    </script>
 
-    <p> This chart shows the proportion of all migrants by state. For example, over 2022-23, over 30% of all international migrants entering into Australia went to New South Wales. </p>
+   <div id="choropleth_map"></div>
+   
+   <script type="text/javascript">
+        var spec2 = "choropleth_map.vg.json";
+        vegaEmbed("#choropleth_map", spec2).then(function(results) {}).catch(console.error);
+   </script>
+
 </body>
 
 </html>
