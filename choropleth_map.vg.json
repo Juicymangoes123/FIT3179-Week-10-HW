@@ -15,7 +15,7 @@
                     "lookup": "properties.name",
                     "from": {
                         "data": {
-                            "url": "overseas-migration.csv"
+                            "url": "overseas-migration-original.csv"
                         },
                         "key": "State",
                         "fields": ["Y2022_23", "Y2022_23_total"]
