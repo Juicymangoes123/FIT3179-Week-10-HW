@@ -30,7 +30,7 @@
                             "lookup": "properties.name",
                             "from": {
                                 "data": {
-                                    "url": "overseas-migration.csv"
+                                    "url": "overseas_migration.csv"
                                 },
                                 "key": "state",
                                 "fields": [""]
@@ -94,10 +94,12 @@
             },
             "transform": [
                 {
-                    "filter": "datum.state=='Australia'"
+                    "filter": "datum.state=='Australia' && datum.reason=='total'"
                 }
             ],
-            "mark": "line",
+            "mark": {
+                "type": "line"
+            },
             "encoding": {
                 "x": {
                     "field": "year",
@@ -105,7 +107,7 @@
                     "title": ""
                 },
                 "y": {
-                    "field": "total",
+                    "field": "amount",
                     "type": "quantitative",
                     "title": "Total"
                 }
@@ -119,6 +121,39 @@
                     }
                 }
             ]
+        },
+        {
+            "width": 800,
+            "height": 400,
+            "data": {
+                "url": "migration_reason.csv"
+            },
+            "transform": [
+                {
+                    "filter": "time_brush"
+                }
+            ],
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "year",
+                    "type": "ordinal",
+                    "axis": {
+                        "title": "Year"
+                    }
+                },
+                "y": {
+                    "field": "amount",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "reason",
+                    "type": "nominal",
+                    "legend": {
+                        "title": "Reason for arriving in Australia"
+                    }
+                }
+            }
         }
     ]
 }
